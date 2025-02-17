@@ -27,3 +27,30 @@ button {
 button:hover {
 	background-color: #45a049;
 }
+
+.gif-container {
+  position: relative;
+  width: 300px; /* Match your GIF size */
+  height: 300px;
+  overflow: hidden;
+}
+
+.gif {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.hover-gif {
+  opacity: 0; /* Hide second gif initially */
+}
+
+.gif-container:hover .hover-gif {
+  opacity: 1; /* Show second gif on hover */
+}
+
+.gif-container:hover .gif:not(.hover-gif) {
+  opacity: 0; /* Hide first gif on hover */
+}
