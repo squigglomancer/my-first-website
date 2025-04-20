@@ -1,15 +1,4 @@
-// Select the button and the counter span
-// const button = document.getElementById('countButton');
-// const counter = document.getElementById('counter');
 
-// Initialize a counter variable
-// let count = 0;
-
-// Add a click event listener to the button
-// button.addEventListener('click', () => {
-//	count++; // Increment the counter
-//	counter.textContent = count; // Update the displayed number
-//});
 
 
 // _______________________________________________________________
@@ -30,3 +19,9 @@ button.addEventListener('click', () => {
     counter.textContent = count; // Update the text content of the counter
     localStorage.setItem('counter', count); // Store the updated counter value in localStorage
 });
+
+// _______________________________________________________________
+
+
+
+  
