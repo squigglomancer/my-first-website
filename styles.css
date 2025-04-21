@@ -1,6 +1,7 @@
 /* This is your styles.css file */
 body {
 	background-color: #ebebb4;
+	text-align: center;
 	/* font-family: Arial, sans-serif; */
 }
 
@@ -32,7 +33,17 @@ button:hover {
   width: 300px; /* Match your GIF size */
   height: 300px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Optional: space between images */
+  margin-top: 20px;
 }
+
+img.pixel-art {
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+  }
+  
 
 .gif {
   position: absolute;
