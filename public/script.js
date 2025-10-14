@@ -20,8 +20,47 @@ button.addEventListener('click', () => {
     localStorage.setItem('counter', count); // Store the updated counter value in localStorage
 });
 
+
+
+
+
+
+// _______________________________________________________________
+// This code is for the global counter functionality
 // _______________________________________________________________
 
+// Set up a WebSocket connection to the server
+const socket = new WebSocket('ws://localhost:8080');
 
+// Select the button and the counter display
+const globalButton = document.getElementById('globalCountButton');
+const globalCounter = document.getElementById('globalCounter');
+
+// _______________________________________________________________
+
+// Listen for messages from the server
+socket.addEventListener('message', (event) => {
+    const data = JSON.parse(event.data);
+    if (data.type === 'globalCount') {
+        const globalCount = data.count;
+        globalCounter.textContent = globalCount;
+    }
+});
+
+// _______________________________________________________________
+
+// When the button is clicked, send an "increment" request to the server
+globalButton.addEventListener('click', () => {
+    socket.send(JSON.stringify({ type: 'increment' }));
+});
+
+// _______________________________________________________________
+
+// Close the WebSocket connection when the page is unloaded
+window.addEventListener('beforeunload', () => {
+    socket.close();
+});
+
+// _______________________________________________________________
 
   

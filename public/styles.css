@@ -1,4 +1,19 @@
-/* This is your styles.css file */
+@font-face {
+    font-family: spookyAllCaps;
+    src: url(/public/fonts/spooky_theme/SpookyTheme.otf) format("opentype");
+}
+
+@font-face {
+    font-family: ruritania;
+    src: url(/public/fonts/ruritania/Ruritania.ttf) format("opentype");
+}
+  
+h2 {
+    font-family: spookyAllCaps;
+    color: darkgreen;
+}
+
+
 body {
 	background-color: #ebebb4;
 	text-align: center;
