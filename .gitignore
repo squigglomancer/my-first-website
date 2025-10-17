@@ -1,0 +1,21 @@
+# .gitignore for PHP projects
+
+# OS and IDE files
+.DS_Store
+.vscode/
+.idea/
+
+# PHP config or secrets (adjust path if used internally)
+../config.php
+
+# Logs and cache
+*.log
+tmp/
+cache/
+
+# Composer
+/vendor/
+composer.lock
+
+# Node (if using frontend tools)
+/node_modules/
